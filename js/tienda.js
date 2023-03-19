@@ -2,8 +2,7 @@ const listaProductos = document.getElementById("lista-productos");
 
 async function getData() {
     try {
-        // const response = await fetch("../src/data.json");
-        const response = await fetch("https://raw.githubusercontent.com/CesarCh3721/APIDecor/main/db.json");
+        const response = await fetch("https://my-json-server.typicode.com/CesarCh3721/APIDecor/productos");
         const data = await response.json();
         data.forEach(element => {
             const producto = document.createElement("div");
