@@ -49,7 +49,7 @@ async function getData() {
         const mistake = document.createElement("p");
         mistake.textContent="( ´•︵•` ) Error de servidor";
         mistake.style.color="#fb4a50";
-        mistake.style.textAlign="center";
+        mistake.style.textAlign="center";  
         mistake.style.fontSize="2rem";
         const contenedorProductos=document.querySelector(".nuestros-productos");
         contenedorProductos.append(mistake)
