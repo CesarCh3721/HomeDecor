@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home Decor</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Outfit:wght@100;700&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@200;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
+            integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css"
+            integrity="sha512-FA9cIbtlP61W0PRtX36P6CGRy0vZs0C2Uw26Q1cMmj3xwhftftymr0sj8/YeezDnRwL9wtWw8ZwtCiTDXlXGjQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <link rel="stylesheet" href="style/style.css">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+</head>
+
+<body>
+
+      <div class="header">
+            <div class="nav-contenedor contenedor">
+                  <div class="logo">
+                        <i class="fa-solid fa-house-chimney-window"></i>
+                        <h1> Home <span>Decor</span></h1>
+                  </div>
+                  <nav class="nav-principal">
+                        <a class="" href="index.html">Inicio</a>
+                        <a href="#">Nosotros</a>
+                        <a href="tienda.html">Tienda</a>
+                        <a href="#">Galeria</a>
+                  </nav>
+                  <div class="icons">
+                        <i id="bars-icon" class="fa-solid fa-bars"></i>
+                        <a href="#" id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#"><i id="shopping-cart-btn" class="fa-solid fa-cart-shopping"></i></a>
+                  </div>
+                  <form action="" id="" class="search-form">
+                        <input type="search" name="" id="search-box" placeholder="Busca cualquier producto...">
+                        <label for="search-box" class="fas fa-search"></label>
+                  </form>
+                  <div id="shopping" class="shopping-cart">
+
+                        <div id="carrito" class="carrito-productos">
+                        </div>
+                  </div>
+
+
+            </div>
+      </div>
+      <section class="nuestros-productos contenedor">
+            <h2>Nuestros Productos</h2>
+            <div class="sk-chase">
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+                  <div class="sk-chase-dot"></div>
+            </div>
+            <div id="lista-productos" class="list-productos">
+            </div>
+      </section>
+      <footer class="footer">
+            <div class="contenedor">
+                  <div class="list-footer">
+                        <div class="footer-item">
+                              <h3>Compañia</h3>
+                              <a class="footer-item-link" href="nosotros.html">Nosotros </a>
+                              <a class="footer-item-link" href="tienda.html">Tienda </a>
+                              <a class="footer-item-link" href="galeria.html">galeria </a>
+                              <a class="footer-item-link" href="index.html">Contacto </a>
+                        </div>
+                        <div class="footer-item">
+                              <h3>Politicas y términos</h3>
+                              <a class="footer-item-link" href="#">Politicas de delivery </a>
+                              <a class="footer-item-link" href="#">Politicas de privacidad </a>
+                              <a class="footer-item-link" href="#">Terminos de condiciones de campaña </a>
+
+                        </div>
+                        <div class="footer-item">
+                              <h3>Soporte</h3>
+                              <a class="footer-item-link" href="#">Centro de ayuda </a>
+                              <a class="footer-item-link" href="#">Preguntas freceuntes</a>
+                              <div class="whatsapp">
+                                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                                    <a class="footer-item-link" href="#">Escribanos</a>
+                              </div>
+
+                        </div>
+                        <div class="footer-item">
+                              <h3>Visita nuestras redes sociales</h3>
+                              <div class="redes">
+                                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                              </div>
+                        </div>
+
+                  </div>
+                  <p class="copyright"> © 2023 Home Decor. Todos los derechos reservados.</p>
+            </div>
+      </footer>
+      <!-- Sweetalert -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <!-- toastify -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+      <script src="./js/tienda.js"></script>
+       <script src="./js/general.js"></script>
+      <!-- <script src="./js/carrito.js"></script> -->
+</body>
+
+</html>

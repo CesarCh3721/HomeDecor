@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home Decor</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Outfit:wght@100;700&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@200;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
+            integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css"
+            integrity="sha512-FA9cIbtlP61W0PRtX36P6CGRy0vZs0C2Uw26Q1cMmj3xwhftftymr0sj8/YeezDnRwL9wtWw8ZwtCiTDXlXGjQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <link rel="stylesheet" href="style/compra.css">
+
+</head>
+
+<body>
+      <div class="contenedor">
+            <form id="confirmacion" action="">
+                  <div class="contenido">
+                        <div class="informacion">
+                              <div class="logo">
+                                    <i class="fa-solid fa-house-chimney-window"></i>
+                                    <h1> Home <span>Decor</span></h1>
+                              </div>
+                              <h2>2.Pago con targeta</h2>
+                              <div class="metodos-pago">
+                                    <img src="./images/if-visa-2593666_86609.ico" alt="">
+                                    <img src="./images/mastercard_payment_method_card_icon.ico" alt="">
+                              </div>
+                              <div class="campo">
+                                    <label for="nombreTarjeta">Nombre impreso en la tarjeta*:</label>
+                                    <input id="nombreTarjeta" name="nombre" type="text" placeholder="Nombre impreso en la tarjeta">
+                              </div>
+                              <div class="campo">
+                                    <label for="numeroTarjeta">Número de tarjeta*:</label>
+                                    <input id="numeroTarjeta" name="numero" type="number" placeholder="Número de tarjeta" >
+                              </div>
+                              <div class="flex">
+                                    <div class="campo">
+                                          <label for="vencimiento">Fecha de vencimiento*:</label>
+                                          <input id="vencimiento" maxlength="7" name="vencimiento" type="text" placeholder="MM/AA" >
+                                    </div>
+                                    <div class="campo">
+                                          <label for="cvv">Código de seguridad*:</label>
+                                          <input id="cvv" type="number"  min="0" max="9999" maxlength="4"  name="cvv" placeholder="CVV" oninput=" this.value=this.value.replace(/[^0-9]/g,'').slice(0, 4)">
+                                    </div>
+                              </div>
+                              <p class="advertencia">*Todos los campos son necesarios </p>
+                              
+                        </div>
+                        <div class="resumen">
+                              <div id="productos" class="productos">
+                              </div>
+                              <div id="costos-antes" class="costos-antes">
+                              </div>
+                              <div id="contenido-total" class="flex">
+                              </div>
+                        </div>
+                  </div>
+                  <div class="botones">
+                        <a class="btn " href="informacion.html">Volver</a>
+                        <input id="confirmar" type="submit" disabled class="btn opacity-5 cursor-not" value="Confirmar">
+                  </div>
+            </form>
+      </div>
+      <script src="./js/resumen.js"></script>
+      <script src="./js/pago.js"></script>
+      <!-- toastify -->
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

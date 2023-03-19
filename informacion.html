@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Home Decor</title>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Outfit:wght@100;700&family=Playfair+Display:wght@400;600;700&family=Raleway:wght@200;400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+            rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
+            integrity="sha512-HHsOC+h3najWR7OKiGZtfhFIEzg5VRIPde0kB0bG2QRidTQqf+sbfcxCTB16AcFB93xMjnBIKE29/MjdzXE+qw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css"
+            integrity="sha512-FA9cIbtlP61W0PRtX36P6CGRy0vZs0C2Uw26Q1cMmj3xwhftftymr0sj8/YeezDnRwL9wtWw8ZwtCiTDXlXGjQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <link rel="stylesheet" href="style/compra.css">
+
+</head>
+
+<body>
+      <div class="contenedor">
+            <form action="">
+                  <div class="contenido">
+                        <div class="informacion">
+                              <div class="logo">
+                                    <i class="fa-solid fa-house-chimney-window"></i>
+                                    <h1> Home <span>Decor</span></h1>
+                              </div>
+                              <h2>1.Información</h2>
+                              <div class="campo">
+                                    <label for="correo">Email*:</label>
+                                    <input id="correo" type="text" placeholder="Email">
+                              </div>
+                              <div class="campo">
+                                    <label for="pais">País*:</label>
+                                    <input id="pais" type="text" placeholder="Pais">
+                              </div>
+                              <div class="flex">
+                                    <div class="campo">
+                                          <label for="nombre">Nombre*:</label>
+                                          <input id="nombre" type="text" placeholder="Nombre">
+                                    </div>
+                                    <div class="campo">
+                                          <label for="apellido">Apellido*:</label>
+                                          <input id="apellido" type="text" placeholder="Apellido">
+                                    </div>
+                              </div>
+                              <div class="campo">
+                                    <label for="dni"> DNI / pasaporte*:</label>
+                                    <input id="dni" type="text"   placeholder="DNI o pasaporte">
+                              </div>
+                              <div class="campo">
+                                    <label for="direccion"> Dirección*:</label>
+                                    <input id="direccion" type="text" placeholder="Direccion">
+                              </div>
+                              <div class="flex">
+                                    <div class="campo">
+                                          <label for="ciudad">Ciudad*:</label>
+                                          <input id="ciudad" type="text" placeholder="Ciudad">
+                                    </div>
+                                    <div class="campo">
+                                          <label for="telefono">Teléfono*:</label>
+                                          <input id="telefono" type="number" placeholder="Telefono">
+                                    </div>
+                              </div>
+                              <p class="advertencia">*Todos los campos son necesarios </p>
+                        </div>
+                        <div class="resumen">
+                              <div id="productos" class="productos">
+                              </div>
+                              <div id="costos-antes" class="costos-antes">
+                              </div>
+                              <div id="contenido-total" class="flex">
+                              </div>
+                        </div>
+                  </div>
+                  <div class="botones">
+                        <a class="btn" href="index.html">Volver a inicio</a>
+                        <a id="continuar-pago"  href="#" class="btn opacity-5"> Continuar con el pago</a>
+                  </div>
+            </form>
+      </div>
+      <script src="./js/resumen.js"></script>
+      <script src="./js/informacion.js"></script>
+</body>
+
+</html>
