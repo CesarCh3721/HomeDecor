@@ -76,7 +76,7 @@ btnAgregarCarrito.forEach((btn) => {
         background: "linear-gradient(to right,rgb(0,176,155),rgb(150,201,61))",
         transform:"translate(0px,0px)",
         color: "#fff",
-        padding: "1rem",
+        padding: "1.5rem",
         fontSize: "2rem",
         fontWeight: "900",
         textAlign: "center"
