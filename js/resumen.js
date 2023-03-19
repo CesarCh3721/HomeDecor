@@ -1,12 +1,9 @@
 // local storage
-let productosStorage = localStorage.getItem("carrito");
-let arrProductos = productosStorage ? JSON.parse(productosStorage) : [];
-
+let arrProductos =  JSON.parse(localStorage.getItem("carrito")) || [];
 // eventos
 const productos = document.getElementById("productos");
 const costosantes = document.getElementById("costos-antes");
 const contentTotal=document.getElementById("contenido-total");
-
 
 mostrarCompras();
 

@@ -42,7 +42,6 @@ async function getData() {
         const car = document.createElement('script');
         car.src = './js/carrito.js';
         document.body.append(car);
-        console.log("listo")
     }
     catch{
         eliminarSpinner();

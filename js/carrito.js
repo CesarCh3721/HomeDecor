@@ -7,10 +7,8 @@ class Mueble {
     this.cantidad = 1;
   }
 }
-
 // local storage
-let productosStorage = localStorage.getItem("carrito");
-let arrProductos = productosStorage ? JSON.parse(productosStorage) : [];
+let arrProductos = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const carrito = document.getElementById("carrito");
 const shoppingCart = document.querySelector('.shopping-cart');
@@ -45,7 +43,6 @@ function mostrarCarritoVacio() {
 }
 
 const btnAgregarCarrito = document.querySelectorAll(".agregar-carrito");
-
 btnAgregarCarrito.forEach((btn) => {
 
   btn.addEventListener("click", (e) => {
@@ -53,7 +50,6 @@ btnAgregarCarrito.forEach((btn) => {
     const idProducto = e.target.getAttribute("data-id");
 
     const elementoSeleccionado = document.querySelector(`.agregar-carrito[data-id="${idProducto}"]`).parentElement.parentElement;
-    console.log(elementoSeleccionado)
     const productoExist = arrProductos.find((element) => element.id === idProducto);
     if (productoExist) {
       productoExist.cantidad++;
@@ -66,7 +62,7 @@ btnAgregarCarrito.forEach((btn) => {
       arrProductos.push(product);
     }
     const name = elementoSeleccionado.querySelector(".texto-producto h3").textContent;
-    const notificacion = Toastify({
+    const anuncio = Toastify({
       text: `${name} 
       agregado al carrito`,
       duration: 2000,
@@ -74,7 +70,7 @@ btnAgregarCarrito.forEach((btn) => {
       position: "center",
       style: {
         background: "linear-gradient(to right,rgb(0,176,155),rgb(150,201,61))",
-        transform:"translate(0px,0px)",
+        transform: "translate(0px,0px)",
         color: "#fff",
         padding: "1.5rem",
         fontSize: "2rem",
@@ -82,16 +78,14 @@ btnAgregarCarrito.forEach((btn) => {
         textAlign: "center"
       }
     });
-    notificacion.showToast()
+    anuncio.showToast()
     mostrarProductos();
   });
 });
 
-
 function mostrarProductos() {
   limpiarCarrito();
   arrProductos.forEach((producto) => {
-
     const box = document.createElement("div");
     box.className = "box";
 
@@ -124,29 +118,58 @@ function mostrarProductos() {
 
     //  eliminar producto de carrito
     data.addEventListener("click", (e) => {
-      eliminarProducto(e.target.getAttribute("data-id"));
-      let notificacion = Toastify({
-        text: `${producto.nombre} eliminado`,
-        duration: 1200,
-        gravity: "top",
-        position: "right",
-        style: {
-          background: "linear-gradient(to right,rgb(255,95,109),rgb(255,195,113))",
-          transform:"translate(0px,0px)",
-          color: "#fff",
-          padding: "1rem",
-          fontSize: "2rem",
-          fontWeight: "900",
-          textAlign: "center"
+      Swal.fire({
+        title: '¿Estas seguro?',
+        text: "Usted no podra revertir la acción!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Si,eliminar!',
+        position: 'center',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      }).then((result) => {
+        if (result.isConfirmed) {
+          eliminarProducto(e.target.getAttribute("data-id"));
+          Swal.fire({
+            title: 'Eliminado!',
+            text: 'El producto fue eliminado',
+            icon: 'success',
+            position: 'center'
+
+          });
         }
       });
-      notificacion.showToast()
+
+
     });
+    // eliminarProducto(e.target.getAttribute("data-id"));
 
-
+    // let notificacionEliminado = Toastify({
+    //   text: `${producto.nombre} eliminado`,
+    //   duration: 1200,
+    //   gravity: "top",
+    //   position: "right",
+    //   style: {
+    //     background: "linear-gradient(to right,rgb(255,95,109),rgb(255,195,113))",
+    //     transform:"translate(0px,0px)",
+    //     color: "#fff",
+    //     padding: "1rem",
+    //     fontSize: "2rem",
+    //     fontWeight: "900",
+    //     textAlign: "center"
+    //   }
+    // });
+    // notificacionEliminado.showToast()
+    mostrarTotal();
+    localStorage.setItem("carrito", JSON.stringify(arrProductos));
   });
-  mostrarTotal();
-  localStorage.setItem("carrito", JSON.stringify(arrProductos));
 }
 function mostrarTotal() {
   const cantidad = arrProductos.reduce((acum, element) => acum + element.precio * element.cantidad, 0);
@@ -158,6 +181,7 @@ function mostrarTotal() {
     shoppingCart.appendChild(p);
   }
   else total.textContent = `total $${cantidad}`;
+
   const finCompra = document.querySelector(".finalizar-compra");
   if (!finCompra) {
     const finalCompra = document.createElement("a");
@@ -173,7 +197,6 @@ function limpiarCarrito() {
   }
 }
 function eliminarProducto(id) {
-
   arrProductos = arrProductos.filter(el => el.id !== id);
   localStorage.setItem("carrito", JSON.stringify(arrProductos));
   limpiarCarrito();
@@ -181,9 +204,7 @@ function eliminarProducto(id) {
     mostrarCarritoVacio();
     eliminarTotal();
   }
-  else {
-    mostrarProductos();
-  }
+  else mostrarProductos();
 }
 function eliminarTotal() {
   const totalPagar = document.getElementsByClassName("total");

@@ -23,12 +23,6 @@ botonConfirmar.addEventListener("click",(e)=>{
     e.preventDefault();
     const confirmacion = document.getElementById("confirmacion");
     confirmacion.reset();
-    tarjeta.nombreTarjeta="";
-    tarjeta.numeroTarjeta="";
-    tarjeta.vencimiento="";
-    tarjeta.cvv="";
-    verificarInfoTarjeta();
-
     Toastify({
         text: "Compra finalizada con exito",
         duration:1500,
@@ -43,9 +37,11 @@ botonConfirmar.addEventListener("click",(e)=>{
             textAlign:"center"
         }
     }).showToast();
-    console.log("enviado")
-
-
+    tarjeta.nombreTarjeta="";
+    tarjeta.numeroTarjeta="";
+    tarjeta.vencimiento="";
+    tarjeta.cvv="";
+    verificarInfoTarjeta();
 });
 function validarTarjeta(e) {
     if (e.target.value.trim() === "") {
@@ -54,23 +50,18 @@ function validarTarjeta(e) {
         verificarInfoTarjeta();
         return;
     }
-    eliminarAlert(e.target.parentElement);
-    // validar numero
+    e.target.parentElement.querySelector("#observacion")?.remove();
     tarjeta[e.target.id] = e.target.value.trim();
     verificarInfoTarjeta();
 }
-
 function mostrarAlert(mensaje, indicador) {
-    eliminarAlert(indicador);
+    indicador.querySelector("#observacion")?.remove();
+
     const obs = document.createElement("p");
     obs.id = "observacion";
     obs.textContent = mensaje;
     obs.style.color = "red";
     indicador.appendChild(obs);
-}
-function eliminarAlert(indicador) {
-    const find = indicador.querySelector("#observacion");
-    if (find) find.remove();
 }
 function verificarInfoTarjeta() {
     if (Object.values(tarjeta).includes("")) {
@@ -84,5 +75,4 @@ function verificarInfoTarjeta() {
         botonConfirmar.classList.remove("opacity-5");
     }
 }
-// verifiacar el numeor de tarjeta 
-// funcionen bien las notificaciones 
+
