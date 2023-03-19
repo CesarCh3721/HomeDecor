@@ -29,20 +29,21 @@ botonConfirmar.addEventListener("click",(e)=>{
     tarjeta.cvv="";
     verificarInfoTarjeta();
 
-    // Toastify({
-    //     text: "Compra finalizada con exito",
-    //     duration:1500,
-    //     gravity:"bottom",
-    //     position: "left",
-    //     style: {
-    //         background: " #eaff6a",
-    //         color:"#000",
-    //         padding:"3rem",
-    //         fontSize:"2rem",
-    //         fontWeight:"900",
-    //         textAlign:"center"
-    //     }
-    // }).showToast();
+    Toastify({
+        text: "Compra finalizada con exito",
+        duration:1500,
+        gravity:"bottom",
+        position: "center",
+        style: {
+            background: "linear-gradient(to right,rgb(0,176,155),rgb(150,201,61))",
+            color:"#fff",
+            padding:"3rem",
+            fontSize:"2rem",
+            fontWeight:"900",
+            textAlign:"center"
+        }
+    }).showToast();
+    console.log("enviado")
 
 
 });
@@ -57,7 +58,6 @@ function validarTarjeta(e) {
     // validar numero
     tarjeta[e.target.id] = e.target.value.trim();
     verificarInfoTarjeta();
-    console.log(tarjeta);
 }
 
 function mostrarAlert(mensaje, indicador) {
