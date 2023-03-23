@@ -51,7 +51,7 @@ async function getData() {
         mistake.style.textAlign="center";  
         mistake.style.fontSize="2rem";
         const contenedorProductos=document.querySelector(".nuestros-productos");
-        contenedorProductos.append(mistake)
+        contenedorProductos.append(mistake);
     }
 }
 function eliminarSpinner(){

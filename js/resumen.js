@@ -9,7 +9,7 @@ mostrarCompras();
 
 function mostrarCompras() {
     arrProductos.forEach((producto) => {
-        const flex = document.createElement("div")
+        const flex = document.createElement("div");
         flex.className = "flex";
         productos.appendChild(flex);
         const nombre = document.createElement("p");
@@ -21,7 +21,6 @@ function mostrarCompras() {
     });
     // subtotal
     const total = arrProductos.reduce((acum, prod) => acum + prod.precio, 0);
-
     const flex = document.createElement("div")
     flex.className = "flex";
     costosantes.appendChild(flex);
@@ -39,7 +38,7 @@ function mostrarCompras() {
 
 }
 function mostrarEnvios(monto) {
-    const flex = document.createElement("div")
+    const flex = document.createElement("div");
     flex.className = "flex";
     costosantes.appendChild(flex);
 
@@ -53,7 +52,7 @@ function mostrarEnvios(monto) {
      
 }
 function mostrarMontoTotal(envios,tot){
-    const div = document.createElement("div")
+    const div = document.createElement("div");
     div.className = "texto-total";
     contentTotal.appendChild(div);
 
@@ -66,7 +65,7 @@ function mostrarMontoTotal(envios,tot){
     impuestos.textContent = `Incluye $${imp} de impuestos`;
     div.appendChild(impuestos);
     
-    const cant=(envios+tot)*1.18;;
+    const cant=(envios+tot)*1.18;
     const total = document.createElement("p");
     total.textContent = `$${cant}`;
     contentTotal.appendChild(total);

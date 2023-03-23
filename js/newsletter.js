@@ -46,7 +46,6 @@ function verificar(e) {
 }
 function mostrarAlert(padre, mensaje) {
     document.querySelector(".alerta-newsletter")?.remove();
-
     const alerta = document.createElement("p");
     alerta.className = "alerta-newsletter"
     alerta.textContent = mensaje;

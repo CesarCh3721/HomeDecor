@@ -278,7 +278,9 @@ img {
     background-color: #fff;
 
 }
-
+#carrito{
+    overflow: auto;
+}
 .carrito-vacio {
     text-align: center;
     font-size: 2rem;
@@ -296,7 +298,6 @@ img {
 }
 
 .box .fa-trash {
-    /*// falta corregir*/
     font-size: 2.2rem;
 
     cursor: pointer;
@@ -346,7 +347,6 @@ img {
     }
 
     .nav-principal {
-
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
@@ -405,7 +405,6 @@ img {
     margin: 0;
     display: inline-block;
     padding: 1rem;
-    /* background-color: #fc363c; */
 }
 
 .hero-span {
@@ -643,8 +642,6 @@ img {
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 2rem;
-        /* align-content: center; */
-
     }
 
     .producto:first-child img {
@@ -677,11 +674,6 @@ img {
 /* nuestros-productos section ends  */
 
 /* contacto section starts  */
-.contacto {
-    /* padding: 2.5rem 0; */
-
-}
-
 .heading {
     color: #fff;
 }
@@ -715,7 +707,6 @@ img {
     margin-bottom: 1rem;
 }
 
-/* Clase error de contacto */
 .mistake {
     background-color: rgb(255, 0, 0);
     color: #fff;
@@ -742,6 +733,7 @@ img {
     background: yellow;
     text-transform: none;
     outline: none;
+    resize: none;
 
     transition: border .5s ease-in;
 
@@ -805,7 +797,6 @@ img {
     width: 30rem;
     box-sizing: border-box;
     outline: none;
-    /* border: 10px solid #090b13; */
 }
 
 @media (min-width: 768px) {

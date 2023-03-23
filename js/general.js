@@ -6,7 +6,6 @@ menu.onclick = () => {
   menu.classList.toggle('fa-times');
   navPrincipal.classList.toggle('active');
 }
-
 // mostrar la barra de busqueda
 const searchForm = document.querySelector('.search-form');
 const searchBtn = document.querySelector('#search-btn');

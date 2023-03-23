@@ -4,7 +4,6 @@ const inputNombreTarjeta = document.getElementById("nombreTarjeta");
 const inputNumTarjeta = document.getElementById("numeroTarjeta");
 const inputVencimiento = document.getElementById("vencimiento");
 const inputCvv = document.getElementById("cvv");
-
 const botonConfirmar = document.getElementById("confirmar");
 
 // eventos

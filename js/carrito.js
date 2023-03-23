@@ -9,7 +9,6 @@ class Mueble {
 }
 // local storage
 let arrProductos = JSON.parse(localStorage.getItem("carrito")) || [];
-
 const carrito = document.getElementById("carrito");
 const shoppingCart = document.querySelector('.shopping-cart');
 
@@ -65,7 +64,7 @@ btnAgregarCarrito.forEach((btn) => {
     const anuncio = Toastify({
       text: `${name} 
       agregado al carrito`,
-      duration: 2000,
+      duration: 1500,
       gravity: "bottom",
       position: "center",
       style: {
@@ -78,7 +77,7 @@ btnAgregarCarrito.forEach((btn) => {
         textAlign: "center"
       }
     });
-    anuncio.showToast()
+    anuncio.showToast();
     mostrarProductos();
   });
 });
@@ -142,31 +141,10 @@ function mostrarProductos() {
             text: 'El producto fue eliminado',
             icon: 'success',
             position: 'center'
-
           });
         }
       });
-
-
     });
-    // eliminarProducto(e.target.getAttribute("data-id"));
-
-    // let notificacionEliminado = Toastify({
-    //   text: `${producto.nombre} eliminado`,
-    //   duration: 1200,
-    //   gravity: "top",
-    //   position: "right",
-    //   style: {
-    //     background: "linear-gradient(to right,rgb(255,95,109),rgb(255,195,113))",
-    //     transform:"translate(0px,0px)",
-    //     color: "#fff",
-    //     padding: "1rem",
-    //     fontSize: "2rem",
-    //     fontWeight: "900",
-    //     textAlign: "center"
-    //   }
-    // });
-    // notificacionEliminado.showToast()
     mostrarTotal();
     localStorage.setItem("carrito", JSON.stringify(arrProductos));
   });

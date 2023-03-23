@@ -39,7 +39,6 @@ inputCiudad.value = informacion.ciudad;
 inputTelefono.value = informacion.telefono;
 
 verificarInformacion();
-
 function verificacion(e) {
     if (e.target.value.trim() === "") {
         mostrarAlerta(`El ${e.target.id} es obligatorio`, e.target.parentElement);
@@ -55,7 +54,7 @@ function verificacion(e) {
     }
     borrarAlerta(e.target.parentElement);
     informacion[e.target.id] = e.target.value.trim();
-    verificarInformacion()
+    verificarInformacion();
 }
 
 function mostrarAlerta(mensaje, padre) {
@@ -81,7 +80,7 @@ function verificarInformacion() {
     }
     else {
         BtnContinuarPago.classList.remove("opacity-5");
-        BtnContinuarPago.href = "pago.html"
+        BtnContinuarPago.href = "pago.html";
         sessionStorage.setItem("informacion", JSON.stringify(informacion));
     }
 }

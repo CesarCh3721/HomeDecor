@@ -55,7 +55,7 @@ function validar(e) {
         mostrarAdvertencia("el email no es valido", e.target.parentElement)
         mails[e.target.id] = "";
         verificarMails();
-        return
+        return;
     }
     borrarAdvertencia(e.target.parentElement);
     mails[e.target.id] = e.target.value.trim().toLowerCase();
@@ -77,7 +77,7 @@ function validarEmail(email) {
     return resultado;
 }
 function verificarMails() {
-    Object.values(mails).includes("") ? deshabilitarSubmit() : habilitarSubmit()
+    Object.values(mails).includes("") ? deshabilitarSubmit() : habilitarSubmit();
 }
 function limpiarMails() {
     mails.nombre = "";
