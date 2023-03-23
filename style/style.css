@@ -276,7 +276,6 @@ img {
     margin: 1rem 0;
     padding: 1rem;
     background-color: #fff;
-
 }
 #carrito{
     overflow: auto;
@@ -288,7 +287,6 @@ img {
 
 .box img {
     width: 8rem;
-
 }
 
 .box .contenido {
@@ -299,16 +297,13 @@ img {
 
 .box .fa-trash {
     font-size: 2.2rem;
-
     cursor: pointer;
     color: rgb(0, 0, 0);
     transform: translateY(-50%);
-
 }
 
 .box .fa-trash:hover {
     color: #fc363c;
-
 }
 
 .box .contenido h3 {
@@ -598,7 +593,6 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .texto-producto span {
